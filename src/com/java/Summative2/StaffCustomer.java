@@ -32,6 +32,12 @@ public class StaffCustomer extends Customer
             return super.chargeAccount(productPrice);
     }
 
+    @Override
+    public String toString() {
+        return "Customer Type: Staff\nCustomerID: "+ accountID+ "\nCustomer Name: "+ customerName
+                +"\nStaff School: "+school+"\nAccount Balance: "+accBalance;
+    }
+
     public static void main(String[] args) throws InvalidProductException, InvalidCustomerException {
         Customer cmpTest= new StaffCustomer("A1234","Dr Jeff", 500, "CMP");
         Customer bioTest= new StaffCustomer("B1234", "Prof Bio", 50, "BIO");
